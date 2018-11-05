@@ -1,4 +1,4 @@
-e80e22846d00e33179f972a365d9fd2a *DESCRIPTION
+24f25bd89e851edfd5f862a45659b0c5 *DESCRIPTION
 15b9a39f2d45f6a431b66ad752f2be5a *NAMESPACE
 bd957f8c9597e280c5bc486db1b50fed *R/bagging.R
 c55f9e65194e69cac7b3f6a14819f7ee *R/bootest.R
@@ -31,10 +31,10 @@ b07616370b51419752d4219f1f4f9f55 *data/GlaucomaMVF.rda
 1f87b4f0d914888b1be71028fef8d316 *data/Smoking.rda
 e54b730797d71b1483cc26bfb3ea552b *data/dystrophy.rda
 45a8a599f130fd94e2bf0ccea723a290 *inst/COPYRIGHTS
-1e9f7e4717461690d08895b20b5ece2e *inst/NEWS
+85521cdd5e263a6540188184e6a8a1b5 *inst/NEWS
 82eeec327b400aadc3c7fe0905483d8a *inst/doc/ipred-examples.R
 72c8610d330afc2376692437ffd0b5e0 *inst/doc/ipred-examples.Rnw
-cef558d5aac17ffcd2af2e53f09c9fc4 *inst/doc/ipred-examples.pdf
+1cc151476e763d53c334f7299b3bb3ee *inst/doc/ipred-examples.pdf
 90287c34e610475e251c8b01241ca1ad *man/DLBCL.Rd
 3cf72f2749b7029a0b8b685461d99d3c *man/GlaucomaMVF.Rd
 c7a9f9b81fb440185fccab54c289864e *man/Smoking.Rd
@@ -69,7 +69,7 @@ dd36ca065d305401e0326680b5cda910 *man/summary.inbagg.Rd
 79fed002bac6fba4b49458b352873e8c *man/varset.Rd
 0ac59b9f3655966e0fb52ca8a8b2b27a *src/SdiffKM.c
 4c8242f0f0243ec116d9d1dd8ed99150 *src/init.c
-1ec797a99f21aa02a0c8b7588b1ba0b0 *tests/Examples/ipred-Ex.Rout.save
+a679715d9b277c25245d92c2f84b24da *tests/Examples/ipred-Ex.Rout.save
 829483c0e5b37b6bae902fd8cb625b7c *tests/ipred-bugs.R
 2d426b88005c657aa4746d841e3d369e *tests/ipred-bugs.Rout.save
 fbbdb49957b86b7f24491f38e341dace *tests/ipred-segfault.R
