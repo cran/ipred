@@ -1,4 +1,4 @@
-254f73a4190177694e27919a16c97e06 *DESCRIPTION
+4f917ef1d256ef4a813073b4c3dd7fb2 *DESCRIPTION
 15b9a39f2d45f6a431b66ad752f2be5a *NAMESPACE
 bd957f8c9597e280c5bc486db1b50fed *R/bagging.R
 c55f9e65194e69cac7b3f6a14819f7ee *R/bootest.R
@@ -13,7 +13,7 @@ d22859a559e876b2e478d366b705d0a1 *R/ipredknn.R
 a98cc646bc7f7a9173d511917bc2db34 *R/irpart.R
 6100af39d915430ab680a3889d52d4ec *R/kfoldcv.R
 7d64c8043f1426fe3f41e324dad74be6 *R/mypredict.lm.R
-4abb96da501e39909f71569ba8b1b85b *R/predict.bagging.R
+51cb58bde04a793a35b2caf233517f43 *R/predict.bagging.R
 1714695c8d4dd8439fc6d1e3f7968e1c *R/predict.inbagg.R
 301f8e08bee09b9817e8ffdce0a4c398 *R/predict.inclass.R
 8b4b9b3039c4fb86d2c96555b32872a8 *R/predict.irpart.R
@@ -24,17 +24,17 @@ ea8bb0575e5ee83b6a4d595212906f83 *R/rsurv.R
 bb92fccd557c101dc3f52a3c7a7a1961 *R/slda.R
 51c9a057a29e6be4477aaf23bcce4000 *R/ssubset.R
 860d6ab9df7627b349a2fd9ac71237fe *R/varset.R
-027ffffaf48a4a52e674384607a05748 *build/vignette.rds
+98dba5e745b93df373d7874c362fd5f8 *build/vignette.rds
 f83cb6bdc4e6265a64be0914da7979f6 *cleanup
 b77f49ce74f90948e4d09122c5fac724 *data/DLBCL.rda
 b07616370b51419752d4219f1f4f9f55 *data/GlaucomaMVF.rda
 1f87b4f0d914888b1be71028fef8d316 *data/Smoking.rda
 e54b730797d71b1483cc26bfb3ea552b *data/dystrophy.rda
 45a8a599f130fd94e2bf0ccea723a290 *inst/COPYRIGHTS
-1ed48bd6b1b72ddf51e8c5b37b9393d3 *inst/NEWS
+16d74f104d9025e5965e12a54797cbfe *inst/NEWS
 82eeec327b400aadc3c7fe0905483d8a *inst/doc/ipred-examples.R
 72c8610d330afc2376692437ffd0b5e0 *inst/doc/ipred-examples.Rnw
-049f221f8aa4a07c0b84b28b0e6ee396 *inst/doc/ipred-examples.pdf
+fe1a811bb710a60158ab0a0884f1af53 *inst/doc/ipred-examples.pdf
 ef01004837ec42585a18b1292cc00952 *man/DLBCL.Rd
 3cf72f2749b7029a0b8b685461d99d3c *man/GlaucomaMVF.Rd
 c7a9f9b81fb440185fccab54c289864e *man/Smoking.Rd
