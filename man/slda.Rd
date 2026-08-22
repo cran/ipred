@@ -9,6 +9,7 @@
   distributed linear scores.
 }
 \usage{
+slda(y, \dots)
 \method{slda}{formula}(formula, data, subset, na.action=na.rpart, \dots)
 \method{slda}{factor}(y, X, q=NULL, \dots)
 }

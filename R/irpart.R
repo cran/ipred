@@ -1,7 +1,7 @@
 #
 #  use update to fit multiple trees to bootstrap samples
 #
-irpart <- function(formula, data=NULL, weights, subset,
+irpart <- function(formula, data=NULL, weights = NULL, subset,
 		   na.action=na.rpart, method, model=FALSE, x=FALSE, y=TRUE,
 		   parms, control, cost, bcontrol, ...)
 {
@@ -9,6 +9,9 @@ irpart <- function(formula, data=NULL, weights, subset,
     mc <- match.call()
     mc$bcontrol <- NULL
     mc[[1]] <- as.name("rpart")
+
+    if (!is.null(weights))
+        stop("weights not implemented")
 
     m <- match.call(expand.dots=FALSE)
     m$model <- m$method <- m$control <- m$bcontrol <- NULL
@@ -20,11 +23,6 @@ irpart <- function(formula, data=NULL, weights, subset,
 
     init_tree <- eval(mc, parent.frame())
     nobs <- length(init_tree$where)
-    if (missing(weights)) { 
-        weights <- rep(1.0, nobs)
-    } else {
-        warning("weights argument ignored in irpart")
-    }
 
     yclasses <- c(class = "sclass", exp = "ssurv", anova = "sreg", poisson = "sreg")
 

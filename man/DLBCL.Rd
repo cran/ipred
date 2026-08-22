@@ -29,7 +29,7 @@ lymphoma (DLBCL) patients.
 }
 \source{
 Except of \code{MGE}, the data is published at
-\url{http://llmpp.nih.gov/lymphoma/data.shtml}. \code{MGEc.*} is the mean of
+\url{https://llmpp.ccr.cancer.gov/lymphoma/data.shtml}. \code{MGEc.*} is the mean of
 the gene expression in each of ten clusters derived by agglomerative average
 linkage hierarchical cluster analysis (Hothorn et al., 2002).
 

@@ -10,6 +10,7 @@ A framework for the indirect classification approach.
 }
 
 \usage{
+inclass(formula, data, \dots)
 \method{inclass}{data.frame}(formula, data, pFUN = NULL, cFUN = NULL, ...)
 }
 \arguments{

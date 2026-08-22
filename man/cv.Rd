@@ -11,6 +11,7 @@
 are normally not called by users.
 }
 \usage{
+cv(y, \dots)
 \method{cv}{factor}(y, formula, data, model, predict, k=10, random=TRUE, 
             strat=FALSE,
             predictions=NULL, getmodels=NULL, list.tindx = NULL, \dots) 

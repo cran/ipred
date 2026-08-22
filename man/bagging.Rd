@@ -13,6 +13,7 @@
   Bagging for classification, regression and survival trees.
 }
 \usage{
+ipredbagg(y, \dots)
 \method{ipredbagg}{factor}(y, X=NULL, nbagg=25, control=
                  rpart.control(minsplit=2, cp=0, xval=0), 
                  comb=NULL, coob=FALSE, ns=length(y), keepX = TRUE, \dots)
@@ -20,6 +21,7 @@
                   comb=NULL, coob=FALSE, ns=length(y), keepX = TRUE, \dots)
 \method{ipredbagg}{Surv}(y, X=NULL, nbagg=25, control=rpart.control(xval=0), 
                comb=NULL, coob=FALSE, ns=dim(y)[1], keepX = TRUE, \dots)
+bagging(formula, data, \dots)
 \method{bagging}{data.frame}(formula, data, subset, na.action=na.rpart, \dots)
 }
 \arguments{

@@ -11,6 +11,7 @@
 are normally not called by users.
 }
 \usage{
+bootest(y, \dots)
 \method{bootest}{factor}(y, formula, data, model, predict, nboot=25,
 bc632plus=FALSE, list.tindx = NULL, predictions = FALSE, 
 both.boot = FALSE, \dots)}

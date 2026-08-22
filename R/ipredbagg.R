@@ -1,6 +1,10 @@
 #$Id: ipredbagg.R,v 1.13 2003/06/11 10:40:17 peters Exp $
 
-workhorse <- function(y, X, control, comb, bcontrol, thisclass, ...) {
+workhorse <- function(y, X, control, comb, bcontrol, thisclass, weights = NULL, ...) {
+
+  if (!is.null(weights))
+      stop("weights not implemented")
+
   # This is double-bagging (comb is lda) or bundling (any arbritrary
   # model in comb)
   if (!is.data.frame(X)) X <- as.data.frame(X)
@@ -135,12 +139,12 @@ ipredbagg.factor <- function(y, X=NULL, nbagg=25, control=
     # noise, if you like)
     mtrees <- workhorse(y, X, control, comb,
                         bcontrol=list(nbagg=nbagg, ns=ns, replace=REPLACE),
-                        thisclass="sclass")
+                        thisclass="sclass", ...)
   } else {
     # use an optimized version
     mydata <- cbind(data.frame(y), X)
     mtrees <- irpart(y ~ ., data=mydata, control=control,
-                     bcontrol=list(nbagg=nbagg, ns=ns, replace=REPLACE))
+                     bcontrol=list(nbagg=nbagg, ns=ns, replace=REPLACE), ...)
   }
   # always keep response and predictors as well as a list of nbagg objects
   # of class "sclass" 
@@ -195,11 +199,11 @@ ipredbagg.numeric <- function(y, X=NULL, nbagg=25, control=
   if (!is.null(comb)) {
     mtrees <- workhorse(y, X, control, comb,
                         bcontrol=list(nbagg=nbagg, ns=ns, replace=REPLACE),
-                        thisclass="sreg")
+                        thisclass="sreg", ...)
   } else {
     mydata <- cbind(data.frame(y), X)
     mtrees <- irpart(y ~ ., data=mydata, control=control,
-                     bcontrol=list(nbagg=nbagg, ns=ns, replace=REPLACE))
+                     bcontrol=list(nbagg=nbagg, ns=ns, replace=REPLACE), ...)
   }
 
   if (keepX) 
@@ -247,11 +251,11 @@ ipredbagg.Surv <- function(y, X=NULL, nbagg=25, control=
   if (!is.null(comb)) {
     mtrees <- workhorse(y, X, control, comb,
                         bcontrol=list(nbagg=nbagg, ns=ns, replace=REPLACE),
-                        thisclass="ssurv")
+                        thisclass="ssurv", ...)
   } else {
     mydata <- cbind(data.frame(y), X)
     mtrees <- irpart(y ~ ., data=mydata, control=control,
-                     bcontrol=list(nbagg=nbagg, ns=ns, replace=REPLACE))
+                     bcontrol=list(nbagg=nbagg, ns=ns, replace=REPLACE), ...)
   }
   if (keepX) 
     RET <- list(y=y, X=X, mtrees=mtrees, OOB=coob, comb=!is.null(comb))

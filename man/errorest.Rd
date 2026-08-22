@@ -8,6 +8,7 @@ Resampling based estimates of prediction error: misclassification error,
 root mean squared error or Brier score for survival data.
 }
 \usage{
+errorest(formula, data, \dots)
 \method{errorest}{data.frame}(formula, data, subset, na.action=na.omit, 
          model=NULL, predict=NULL,
          estimator=c("cv", "boot", "632plus"), 
@@ -125,10 +126,10 @@ mypredict.lda <- function(object, newdata)
 errorest(Species ~ ., data=iris, model=lda, 
          estimator = "cv", predict= mypredict.lda)
 
-data("PimaIndiansDiabetes", package = "mlbench")
+data("SynthDiabetes", package = "mlbench")
 \dontrun{
 # 632+ bootstrap of LDA for Diabetes data
-errorest(diabetes ~ ., data=PimaIndiansDiabetes, model=lda,
+errorest(diabetes ~ ., data=SynthDiabetes, model=lda,
          estimator = "632plus", predict= mypredict.lda)
 }
 
@@ -136,7 +137,7 @@ errorest(diabetes ~ ., data=PimaIndiansDiabetes, model=lda,
 list.tindx <- list(1:100, 101:200, 201:300, 301:400, 401:500,
         501:600, 601:700, 701:768)
 
-errorest(diabetes ~ ., data=PimaIndiansDiabetes, model=lda,
+errorest(diabetes ~ ., data=SynthDiabetes, model=lda,
           estimator = "cv", predict = mypredict.lda,
           est.para = control.errorest(list.tindx = list.tindx))
 
@@ -148,7 +149,7 @@ for(i in 1:25) {
   list.tindx[[i]] <- sample(1:768, 768, TRUE)
 }
 
-errorest(diabetes ~ ., data=PimaIndiansDiabetes, model=lda,
+errorest(diabetes ~ ., data=SynthDiabetes, model=lda,
           estimator = c("boot", "632plus"), predict= mypredict.lda,
           est.para = control.errorest(list.tindx = list.tindx))
 
